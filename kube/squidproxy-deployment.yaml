@@ -1,0 +1,25 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: squidproxy
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        name: squidproxy
+    spec:
+      containers:
+        - name: squidproxy
+          image: quay.io/ukhomeofficedigital/squidproxy:v0.0.2
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3128
+          resources:
+            limits:
+              memory: "300Mi"
+              cpu: "2"
+            requests:
+              memory: "128Mi"
+              cpu: "200m"
