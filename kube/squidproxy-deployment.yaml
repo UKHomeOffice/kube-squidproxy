@@ -23,3 +23,11 @@ spec:
             requests:
               memory: "128Mi"
               cpu: "200m"
+          volumeMounts:
+            - name: squid-config
+              mountPath: /etc/squid/squid.conf
+              subPath: squid.conf
+      volumes:
+        - name: squid-config
+          configMap:
+            name: squidproxy-config

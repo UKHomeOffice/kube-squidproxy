@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: squidproxy-config
+data:
+  squid.conf: |
+    # ACL ALLOWED PORTS
+    acl Safe_ports port 443                # HTTPS
+    acl SSL_ports port 443                 # HTTPS
+    acl CONNECT method CONNECT
+    http_access deny !Safe_ports
+    http_access deny CONNECT !SSL_ports
+
+    # ACL ALLOWED DESTINATIONS
+    acl urlwhitelist dstdomain .amazonaws.com
+    http_access allow urlwhitelist
+
+    # LISTENING PORT
+    http_port 3128
+
+    # ADDITIONAL TWEAKS
+    cache deny all
+    forwarded_for delete
+    httpd_suppress_version_string on
+    via off
+
+    # LOGGING
+    logfile_rotate 0
+    logformat squid {"logtime":"%tl", response_time":%tr, "src_ip":"%>a", "squid_request_status":"%Ss", "http_status_code":%>Hs, "reply_size_include_header":%<st, "http_method":"%rm", "request_url":"%ru", "request_path":"%rp", "squid":"%Sh", "dst_ip":"%<a", "content_type":"%mt"}
+    cache_log stdio:/dev/stdout
+    access_log stdio:/dev/stdout
+    cache_store_log stdio:/dev/stdout 
