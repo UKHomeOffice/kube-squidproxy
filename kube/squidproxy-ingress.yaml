@@ -6,10 +6,10 @@ metadata:
     kubernetes.io/ingress.class: "nginx-internal"
 spec:
   rules:
-  - host: proxy.hodc-acp.homeoffice.gov.uk
+  - host: proxy-test.hodc-acp.homeoffice.gov.uk
     http:
       paths:
       - path: /
         backend:
           serviceName: squidproxy-service
-          servicePort: 3128
+          servicePort: 3129

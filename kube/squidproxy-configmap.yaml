@@ -16,7 +16,7 @@ data:
     http_access allow urlwhitelist
 
     # LISTENING PORT
-    http_port 3128
+    http_port 3129
 
     # ADDITIONAL TWEAKS
     cache deny all
