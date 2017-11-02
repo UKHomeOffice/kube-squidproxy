@@ -26,8 +26,8 @@ echo "--- Kube namespace: ${KUBE_NAMESPACE}"
 
 kd --insecure-skip-tls-verify \
   --timeout 10m0s \
+  -f kube/squidproxy-configmap.yaml \
   -f kube/squidproxy-deployment.yaml \
   -f kube/squidproxy-service.yaml \
   -f kube/squidproxy-ingress.yaml \
-  -f kube/squidproxy-networkpolicy.yaml \
-  -f kube/squidproxy-configmap.yaml
+  -f kube/squidproxy-networkpolicy.yaml
