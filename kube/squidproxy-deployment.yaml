@@ -25,8 +25,7 @@ spec:
               cpu: "200m"
           volumeMounts:
             - name: squid-config
-              mountPath: /etc/squid/squid.conf
-              subPath: squid.conf
+              mountPath: /etc/squid
       volumes:
         - name: squid-config
           configMap:
