@@ -1,0 +1,15 @@
+---
+pipeline:
+
+  rollout_testing:
+    image: quay.io/ukhomeofficedigital/kd:v0.3.1
+    secrets:
+      - kube_server_acp_ops
+      - kube_token_acp_ops
+    environment:
+      - DRONE_DEPLOY_TO=acp-ops
+    commands:
+      - ./bin/deploy.sh
+    when:
+      event: push
+      branch: master
