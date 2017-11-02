@@ -12,7 +12,7 @@ export TRIGGER_SLEEP_SECONDS=5m
 
 case ${DRONE_DEPLOY_TO} in
   'acp-ops')
-    export KUBE_NAMESPACE=squidproxy
+    export KUBE_NAMESPACE=squid-proxy
     export KUBE_SERVER=${KUBE_SERVER_ACP_OPS}
     export KUBE_TOKEN=${KUBE_TOKEN_ACP_OPS}
   ;;
