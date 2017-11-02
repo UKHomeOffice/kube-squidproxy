@@ -29,4 +29,5 @@ data:
     logformat squid {"logtime":"%tl", response_time":%tr, "src_ip":"%>a", "squid_request_status":"%Ss", "http_status_code":%>Hs, "reply_size_include_header":%<st, "http_method":"%rm", "request_url":"%ru", "request_path":"%rp", "squid":"%Sh", "dst_ip":"%<a", "content_type":"%mt"}
     cache_log stdio:/dev/stdout
     access_log stdio:/dev/stdout
-    cache_store_log stdio:/dev/stdout 
+    cache_store_log stdio:/dev/stdout
+  mime.conf:  
