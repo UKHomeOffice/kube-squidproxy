@@ -30,4 +30,5 @@ data:
     cache_log stdio:/dev/stdout
     access_log stdio:/dev/stdout
     cache_store_log stdio:/dev/stdout
-  mime.conf: {} 
+  mime.conf: |
+    # Empty file
