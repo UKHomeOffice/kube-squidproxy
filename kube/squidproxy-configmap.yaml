@@ -11,10 +11,6 @@ data:
     http_access deny !Safe_ports
     http_access deny CONNECT !SSL_ports
 
-    # ACL ALLOWED DESTINATIONS
-    acl urlwhitelist dstdomain .amazonaws.com
-    http_access allow urlwhitelist
-
     # LISTENING PORT
     http_port 3129
 
