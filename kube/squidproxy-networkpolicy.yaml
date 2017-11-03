@@ -12,4 +12,4 @@ spec:
               name: ingress-internal
       ports:
         - protocol: TCP
-          port: 3129
+          port: 31290
