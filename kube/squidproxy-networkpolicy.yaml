@@ -2,7 +2,7 @@
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: ingress-network-policy
+  name: squid-network-policy
 spec:
   podSelector:
   ingress:
