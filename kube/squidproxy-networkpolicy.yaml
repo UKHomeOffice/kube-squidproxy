@@ -5,11 +5,7 @@ metadata:
   name: squid-network-policy
 spec:
   podSelector:
+    matchLabels:
+      name: squidproxy 
   ingress:
-    - from:
-        - namespaceSelector:
-            matchLabels:
-              name: ingress-internal
-      ports:
-        - protocol: TCP
-          port: 31290
+  - {}

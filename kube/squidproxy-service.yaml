@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: squid
+  name: squidproxy
   labels:
-    name: squid
-    service: squid
+    name: squidproxy
+    service: squidproxy
 spec:
   type: NodePort
   ports:
