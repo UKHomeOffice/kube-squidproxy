@@ -29,5 +29,4 @@ kd --insecure-skip-tls-verify \
   -f kube/squidproxy-configmap.yaml \
   -f kube/squidproxy-deployment.yaml \
   -f kube/squidproxy-service.yaml \
-  -f kube/squidproxy-ingress.yaml \
   -f kube/squidproxy-networkpolicy.yaml
