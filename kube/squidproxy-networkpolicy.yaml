@@ -9,3 +9,6 @@ spec:
       name: squidproxy 
   ingress:
   - {}
+  ports:
+  - protocol: TCP
+    port: 31290
