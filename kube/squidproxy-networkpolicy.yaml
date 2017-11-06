@@ -8,8 +8,6 @@ spec:
     matchLabels:
       name: squidproxy 
   ingress:
-  - from: 
-    - {}
-    ports:
+  - ports:
     - protocol: TCP
       port: 31290
