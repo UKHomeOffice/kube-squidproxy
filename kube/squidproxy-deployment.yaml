@@ -15,7 +15,7 @@ spec:
           image: quay.io/ukhomeofficedigital/squidproxy:v0.0.2
           imagePullPolicy: IfNotPresent
           securityContext:
-            runAsNonRoot: true
+            runAsNonRoot: false
           ports:
             - containerPort: 31290
           resources:
