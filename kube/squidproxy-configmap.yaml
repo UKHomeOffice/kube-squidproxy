@@ -15,7 +15,7 @@ data:
     pid_filename /home/proxy/squid.pid
 
     # LISTENING PORT
-    http_port 31290
+    http_port 3129
 
     # ADDITIONAL TWEAKS
     cache deny all

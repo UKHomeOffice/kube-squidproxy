@@ -17,7 +17,7 @@ spec:
           securityContext:
             runAsNonRoot: true
           ports:
-            - containerPort: 31290
+            - containerPort: 3129
           resources:
             limits:
               memory: "300Mi"
