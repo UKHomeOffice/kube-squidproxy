@@ -9,8 +9,8 @@ spec:
   type: NodePort
   ports:
     - name: http
-      port: 31290
+      port: 3129
       targetPort: http
-      nodePort: 3129
+      nodePort: 31290
   selector:
     service: squidproxy
