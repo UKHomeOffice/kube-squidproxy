@@ -4,10 +4,10 @@ kind: NetworkPolicy
 metadata:
   name: squid-network-policy
 spec:
-  podSelector: 
-    matchLabels:
-      name: squidproxy 
-  ingress:
-  - ports:
-    - protocol: TCP
-      port: 31290
+   podSelector: 
+     matchLabels:
+       name: squidproxy 
+   ingress:
+   - ports:
+     - protocol: TCP
+       port: 31290
