@@ -9,6 +9,7 @@ spec:
   type: NodePort
   ports:
     - name: http
+      port: 31290
       targetPort: 3129
       nodePort: 31290
   selector:
