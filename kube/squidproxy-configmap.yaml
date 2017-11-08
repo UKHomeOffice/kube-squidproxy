@@ -5,6 +5,7 @@ metadata:
 data:
   squid.conf: |
     # ACL ALLOWED PORTS
+    acl Safe_ports port 80                 # HTTP
     acl Safe_ports port 443                # HTTPS
     acl SSL_ports port 443                 # HTTPS
     acl CONNECT method CONNECT
