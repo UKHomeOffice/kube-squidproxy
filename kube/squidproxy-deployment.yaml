@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
         - name: squidproxy
-          image: quay.io/ukhomeofficedigital/squidproxy:v0.0.4
+          image: quay.io/ukhomeofficedigital/squidproxy:v0.0.5
           imagePullPolicy: IfNotPresent
           securityContext:
             runAsNonRoot: true
